@@ -29,14 +29,15 @@ const Wrapper = styled.section`
 `
 
 const Skills = () => {
-  const scrollableElementRef = useRef(null)
+  const scrollableElementRef = useRef<HTMLUListElement>(null)
 
   useEffect(() => {
+    const element = scrollableElementRef.current
     const handleWheel = (event: WheelEvent) => {
-      const element = scrollableElementRef.current
-
       event.preventDefault()
-      element.scrollLeft += event.deltaY
+      if (element) {
+        element.scrollLeft += event.deltaY
+      } 
     }
 
     const scrollableElement = scrollableElementRef.current

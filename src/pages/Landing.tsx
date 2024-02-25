@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Skills2 from '../components/Skills2'
-import TickerTape from '../components/TickerTape'
+
 
 const Landing = () => {
   return (

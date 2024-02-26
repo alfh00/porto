@@ -23,7 +23,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Courier New";
 }
 /*
   2. Remove default margin
@@ -99,13 +99,21 @@ button {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.25rem 1.5rem;
+  padding: 0.25rem 1rem;
   color: rgb(250, 235, 215);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  min-width: 9em;
 }
 button:hover {
-  background-color: rgba(250, 235, 215, 0.726);
-  color: #005c97;
+  background-color: rgba(245, 245, 245, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 .glassContainer {
@@ -123,4 +131,15 @@ button:hover {
   min-width: 100%;
   padding-left: 11%;
   color: rgb(250, 235, 215, 0.5);
+}
+
+.gdt-pink {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(90deg, #f4bfdb 0%, #b43e8f 100%);
+  filter: blur(900px);
+  z-index: -1;
 }

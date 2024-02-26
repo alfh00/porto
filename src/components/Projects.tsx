@@ -6,12 +6,12 @@ const Wrapper = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
-.projects {
+.projects-cards {
     max-width: 80%;
     position: relative;
     top: -50px;
     display: grid;
-    grid-template: repeat(3, 366px) / repeat(auto-fit, 233px);
+    grid-template: repeat(3, 366px) / repeat(auto-fit, minmax(233px, 3fr));
     grid-gap: 10px;
 }
 
@@ -51,10 +51,10 @@ bottom: 0;
 const Projects = () => {
   return (
     <Wrapper>
-        <div className='section-title'>
+        <div className='section-title projects'>
         <h4>Projects</h4>
         </div>
-        <div className='projects'>
+        <div className='projects-cards'>
         {projects.map((project, index) => {
             return (
             <div className='glassContainer project' key={index}>

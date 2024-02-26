@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
-import Skills2 from '../components/Skills2'
+
 
 
 const Landing = () => {
@@ -13,10 +13,8 @@ const Landing = () => {
       
       <AnimBg />
       <Navbar />
-      {/* <TickerTape /> */}
       <Hero />
-      {/* <Skills /> */}
-      <Skills2 />
+      <Skills />
       <Projects/>
  
     </>

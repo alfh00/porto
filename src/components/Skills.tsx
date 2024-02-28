@@ -64,7 +64,7 @@ const Wrapper = styled.section`
     align-items: flex-start;
     justify-content: center;
     padding-left: 5%;
-    width: 100%;
+    width: 100vw;
  
   }
   .skills-icons {
@@ -115,7 +115,10 @@ const Wrapper = styled.section`
   @media only screen and (max-width: 599px) {
     .skills-container {
       flex-direction: column;
+      align-items: center;
+
     }
+
 
     .section-title {
       bottom: -45px;
@@ -129,9 +132,14 @@ const Wrapper = styled.section`
     padding-left: 5%;
     width: 100%;
     }
+    .skills-icons {
+
+    width: fit-content;
+    }
     ul {
-    justify-self: center;
+    align-self: center;
     padding-left: 0;
+    width: fit-content;
     }
     .skills-pie {
       height: 350px;

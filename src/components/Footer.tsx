@@ -66,6 +66,9 @@ const Wrapper = styled.footer`
     ul {
         list-style: none;
     }
+    ul a {
+        cursor: pointer;
+    }
     .social {
         display: flex;
         flex-direction: row;

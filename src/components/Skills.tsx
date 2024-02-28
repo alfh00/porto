@@ -17,27 +17,30 @@ const Skills = () => {
       </div>
 
       <div className='skills-container'>
-        <ul className='section-skills-icons' >
-          {skills.map((skill, index) => (
-            <li className='glassContainer skill' key={index}>
-              {skill.icon && (
-                <skill.icon
-                style={{ color: skill.color, fontSize: skill.size }}
-                />
-                )}
-              
-            </li>
-          ))}
-          <li className='glassContainer skill' key={'10'}><img src={marble} alt="" /></li>
-        </ul>
-        <div style={{height: '450px',width: '500px'}}>
+        <div className='skills-icons'>
+          <ul  >
+            {skills.map((skill, index) => (
+              <li className='glassContainer skill' key={index}>
+                {skill.icon && (
+                  <skill.icon
+                  style={{ color: skill.color, fontSize: skill.size }}
+                  />
+                  )}
+                
+              </li>
+            ))}
+            <li className='glassContainer skill' key={'10'}><img src={marble} alt="" /></li>
+          </ul>
+          <div className='ring'>
+              <img src={sphere} alt="" />
+              <div className='gdt-pink' />
+          </div>
+        </div>
+        <div className='skills-pie' >
           <MyResponsivePie data={data} />
         </div>
       </div>
-      <div className='ring'>
-            <img src={sphere} alt="" />
-            <div className='gdt-pink' />
-      </div>
+
     </Wrapper>
   )
 }
@@ -46,8 +49,9 @@ export default Skills
 
 
 const Wrapper = styled.section`
-position: relative;
-height: 100vh;
+  position: relative;
+
+
 
   .section-title {
     position: relative;
@@ -59,27 +63,22 @@ height: 100vh;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-
+    padding-left: 5%;
+    width: 100%;
+ 
   }
-  .skills-container > div {
+  .skills-icons {
     position: relative;
-
+    width: 40%;
+    
+  }
+  .skills-icons > ul {
+    display: grid;
+    grid-template: repeat(4, 100px) / repeat(3, 100px);
+    grid-gap: 10px;
   }
 
-  .section-skills-icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style-type: none;
-    max-width: 40%;
-    height: 100%;
-
-    padding: 0 2.75rem ;
-  }
   .glassContainer {
-    min-width: 100px;
-    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,32 +88,57 @@ height: 100vh;
     scale: 110%;
   }
   .skill:last-child {
-    padding: 0 0;
-    margin: 0 0 ;
-    width: 100px;
-    height: 100px;
     overflow: hidden;
-
   }
   .skill:last-child > img  {
-    scale: 500%;
+    display: block;
+    scale: 800%;
   }
-
+  .skills-pie {
+    height: 450px;
+    width: 450px
+  }
 
   .ring {
     position: absolute;
     width: 200px;
-    bottom: 80px;
-    left: 70px;
-    z-index: -1;
+    left: -100px;
+    bottom: -60px;
+
   }
   .gdt-pink {
     width: 80%;
     height: 50%;
     left: 50px;
   }
-`
 
+  @media only screen and (max-width: 599px) {
+    .skills-container {
+      flex-direction: column;
+    }
+
+    .section-title {
+      bottom: -45px;
+    } 
+
+    .section-title h3 {
+      font-size: 5rem;
+      bottom: -50px;
+    } 
+    .skills-container {
+    padding-left: 5%;
+    width: 100%;
+    }
+    ul {
+    justify-self: center;
+    padding-left: 0;
+    }
+    .skills-pie {
+      height: 350px;
+      width: 340px;
+    }
+  }
+`
 
 type Skill = {
   id: string

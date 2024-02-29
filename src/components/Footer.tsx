@@ -32,7 +32,7 @@ const Footer = () => {
             <a href="https://github.com/alfh00"  target="_blank" style={{  color: 'rgba(0, 0, 0, 0.8)' ,fontSize: '36px' }}>
                 <FaGithub />
             </a>
-            <a href="https://github.com/alfh00"  target="_blank" style={{  color: 'rgba(0, 0, 0, 0.8)' ,fontSize: '36px' }}>
+            <a href="https://www.codewars.com/users/alfh00"  target="_blank" style={{  color: 'rgba(0, 0, 0, 0.8)' ,fontSize: '36px' }}>
             <SiCodewars  style={{borderRadius:'50%'}}/>
             </a>
             <a href="https://www.linkedin.com/in/alfh00/"  target="_blank" style={{  color: 'rgba(0, 0, 0, 0.8)' ,fontSize: '36px' }}>

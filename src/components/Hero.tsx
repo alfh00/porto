@@ -150,7 +150,89 @@ const Wrapper = styled.section`
     animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
   }
 
-  @keyframes flip5 {
+
+  button {
+    background-color: aliceblue;
+    color: #121212;
+  }
+  button:hover {
+
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  .one {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dimond {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    right: 70px;
+  }
+
+/* Responsive Breakpoints */
+@media only screen and (max-width: 599px) {
+  /* Styles for screens up to 599px (e.g., smartphones) */
+  
+  .full {
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .text {
+    justify-content: flex-start;
+    align-items: center;
+    min-height: min-content;
+    position: relative;
+    top: -50px;
+    
+  }
+  button {
+    margin: 0 auto 0 auto;
+  }
+  .img-marble {
+
+    position: relative;
+    border-radius: 16px;
+    height: 166px;
+    width: 100%;
+    overflow: hidden;
+    top: -2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 0.85rem;
+  }
+  .one {
+    height: 100%;
+    top: -5rem;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Styles for screens 768px and above */
+}
+
+@media only screen and (min-width: 992px) {
+  /* Styles for screens 992px and above */
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Styles for screens 1200px and above */
+}
+
+@keyframes flip5 {
     0% {
       margin-top: -450px;
     }
@@ -188,68 +270,4 @@ const Wrapper = styled.section`
       margin-top: -450px;
     }
   }
-
-  button {
-    margin: 0 0 0 auto;
-  }
-
-.one {
-  position: relative;
-  width: 100%;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-  .dimond {
-    position: absolute;
-    width: 200px;
-    bottom: 0;
-    right: 70px;
-  }
-
-/* Responsive Breakpoints */
-@media only screen and (max-width: 599px) {
-  /* Styles for screens up to 599px (e.g., smartphones) */
-  
-  .full {
-    flex-direction: column;
-  }
-  
-  .text {
-    justify-content: flex-start;
-  }
-  .img-marble {
-  position: relative;
-  border-radius: 16px;
-  height: 233px;
-  width: 100%;
-  overflow: hidden;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 0.85rem;
-  }
-  .one {
-    height: 100%;
-    top: -5rem;
-  }
-
-}
-
-@media only screen and (min-width: 768px) {
-  /* Styles for screens 768px and above */
-}
-
-@media only screen and (min-width: 992px) {
-  /* Styles for screens 992px and above */
-}
-
-@media only screen and (min-width: 1200px) {
-  /* Styles for screens 1200px and above */
-}
 `

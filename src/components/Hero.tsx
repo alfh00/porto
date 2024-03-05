@@ -179,9 +179,9 @@ const Wrapper = styled.section`
   }
 
 /* Responsive Breakpoints */
-@media only screen and (max-width: 599px) {
-  /* Styles for screens up to 599px (e.g., smartphones) */
-  
+@media only screen and (max-width: 820px) {
+  padding: calc(2rem + 25px) 5% 5% 5% ;
+   
   .full {
     position: relative;
     flex-direction: column;

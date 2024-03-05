@@ -125,7 +125,7 @@ bottom: 0;
     bottom: 40%;
     right: -200px;
   }
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 820px) {
     .project {
     padding: 5%;
     }

@@ -61,10 +61,10 @@ const Wrapper = styled.section`
   .skills-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding-left: 5%;
-    width: 100vw;
+    width: 100%;
  
   }
   .skills-icons {
@@ -113,13 +113,6 @@ const Wrapper = styled.section`
   }
 
   @media only screen and (max-width: 599px) {
-    .skills-container {
-      flex-direction: column;
-      align-items: center;
-
-    }
-
-
     .section-title {
       bottom: -45px;
     } 
@@ -133,7 +126,6 @@ const Wrapper = styled.section`
     width: 100%;
     }
     .skills-icons {
-
     width: fit-content;
     }
     ul {
@@ -145,6 +137,15 @@ const Wrapper = styled.section`
       height: 350px;
       width: 340px;
     }
+  }
+  @media only screen and (max-width: 899px) {
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+    }
+
   }
 `
 

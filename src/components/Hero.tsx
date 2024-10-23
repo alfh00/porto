@@ -36,7 +36,7 @@ const Hero = () => {
                     </li>
                   </ul>
               </div>
-             <h2>Software Developer</h2>
+             <h2>Support & Developer</h2>
           </div>
           <button>
             <Link to='skills' smooth duration={500}>Explore</Link>
